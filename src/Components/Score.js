@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Score = ()=> {
+const Score = () => {
     return (
- <div>
-     Score
- </div>
+        <div>
+            <div className="container">
+                <h1 className="home_text">Score</h1>
+                <a href="/Quiz" className="btn btn-dark">Retake Quiz</a> 
+                
+            </div>
+        </div>
     )
 }
 

@@ -1,31 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import './App.css';
-import{ BrowserRouter, Switch, Route} from "react-router-dom";
-import Home from "./Components/Home";
-import Quiz from "./Components/Quiz";
-import Score from "./Components/Score";
+import Home from './Components/Home';
+import Quiz from './Components/Quiz';
+import Score from './Components/Score';
 
 function App() {
   return (
-    <BrowserRouter>
-    
     <div className="App">
-      <Switch>
-         <Route path="/Home">
-           <Home />
-         </Route>
-         <Route path="/Quiz">
-           <Quiz>
-           </Quiz>
-         </Route>
-         <Route path="/Score">
-           <Score>
-           </Score>
-         </Route>
-      </Switch>
-    </div>
-    </BrowserRouter>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/Quiz">
+              <Quiz />
+            </Route>
+            <Route path="/Score">
+              <Score />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
 
+
+    </div>
   );
 }
 
