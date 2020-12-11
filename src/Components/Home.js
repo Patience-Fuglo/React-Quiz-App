@@ -12,7 +12,7 @@ const Home = () =>{
          <p>
            Quiz Maker, Pop Questions!  
          </p>
-         <a href="/Quiz" className="btn btn-dark">Start Quiz</a> 
+         <a href="#/Quiz" className="btn btn-dark">Start Quiz</a> 
          {/* Button start quiz */}
         </div>
         </div>
