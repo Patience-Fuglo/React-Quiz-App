@@ -2,9 +2,9 @@ import React from 'react';
 
 class Score extends React.Component {
 
-    // Called after the component renders (loads)
-    componentDidMount() {
-
+    // Called after the component unmounts
+    componentWillUnmount() {
+        this.props.setScore(0);
     }
 
     // returns what we see on the page (HTML)

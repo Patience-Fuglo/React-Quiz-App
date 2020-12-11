@@ -24,7 +24,7 @@ function App() {
                 <Quiz score={score} setScore={setScore}/>
               </Route>
               <Route path="/Score">
-                <Score score={score} />
+                <Score setScore={setScore} score={score} />
               </Route>
               <Route path="/">
                 <Home />
