@@ -17,7 +17,7 @@ class Score extends React.Component {
                     {this.props.score === 5 && 
                         <h3>Perfect!</h3>
                     }
-                    <a href="/Quiz" className="btn btn-dark">Retake Quiz</a> 
+                    <a href="#/Quiz" className="btn btn-dark">Retake Quiz</a> 
                 </div>
             </div>
         )

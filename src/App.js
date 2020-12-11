@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className='container'>
       <div className="App">
-        <Router>
+        <Router basename="/">
           <div>
             <Switch>
               <Route path="/Quiz">
