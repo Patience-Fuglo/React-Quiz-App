@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,26 +12,32 @@ import Quiz from './Components/Quiz';
 import Score from './Components/Score';
 
 function App() {
+  const [score, setScore] = useState(0);
+
   return (
-    <div className="App">
-      <Router>
+    <div className='container'>
+      <div className="App">
+        <Router>
+          <div>
+            <Switch>
+              <Route path="/Quiz">
+                <Quiz score={score} setScore={setScore}/>
+              </Route>
+              <Route path="/Score">
+                <Score score={score} />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+
         <div>
-          <Switch>
-            <Route path="/Quiz">
-              <Quiz />
-            </Route>
-            <Route path="/Score">
-              <Score />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
         </div>
-      </Router>
-
-
+      </div>
     </div>
+
   );
 }
 
