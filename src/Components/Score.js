@@ -14,6 +14,9 @@ class Score extends React.Component {
                 <div className="container">
                     <h1 className="home_text">Score</h1>
                     <h2> {this.props.score} </h2>
+                    {this.props.score === 5 && 
+                        <h3>Perfect!</h3>
+                    }
                     <a href="/Quiz" className="btn btn-dark">Retake Quiz</a> 
                 </div>
             </div>
